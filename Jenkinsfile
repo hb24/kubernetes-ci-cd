@@ -19,7 +19,7 @@ node {
          * https://medium.com/@mccode/the-misunderstood-docker-tag-latest-af3babfd6375
          */
         sh "docker build -t ${imageName} -f applications/hello-kenzan/Dockerfile applications/hello-kenzan"
-        sh "docker tag ${imageName} $taggedImageName}"
+        sh "docker tag ${imageName} ${taggedImageName}"
 
     stage "Push"
 
